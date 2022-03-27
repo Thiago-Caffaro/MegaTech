@@ -62,9 +62,6 @@ header>nav>ul>li>a:hover{
     display: none;
 }
 @media (max-width: 635px){
-    #logo-mt{
-        align-items: center;
-    }
     .menu{
         display: none;
     }
