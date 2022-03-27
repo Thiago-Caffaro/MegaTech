@@ -30,7 +30,7 @@ header>picture>#logo-mt{
     background-color: rgb(113, 114, 116);
     height: 1px;
 }
-.menu{
+#menu{
     font-size: 18px;
     display: flex;
     gap: 8px;
