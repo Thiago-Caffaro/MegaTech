@@ -18,19 +18,13 @@ body{
 }
 header{
     background-color: var(--cor-header);
-    height: 100%;
     justify-content: space-between;
-    box-sizing: border-box;
-    width: 100%;
+    display: flex;
 }
 header>picture>#logo-mt{
     margin: 20px;
 }
-.separador{
-    background-color: rgb(113, 114, 116);
-    height: 1px;
-}
-#menu{
+#nav{
     font-size: 18px;
     display: flex;
     gap: 8px;
@@ -38,39 +32,29 @@ header>picture>#logo-mt{
 header>nav{
     font-family: var(--fonte-nav);
     height: 70px;
+    margin: 20px;
+    margin-right: 70px;
 }
 header>nav>ul{
     list-style: none;
+    display: flex;
     margin: 0 auto;
-    height: 100%;
 }
 header>nav>ul>li{
     display: inline;
 }
 header>nav>ul>li>a{
     text-decoration: none;
-    display: inline-block;
+    display: block;
     padding: 20px;
     padding-bottom: 27px;
     transition: .3s;
 }
 header>nav>ul>li>a:hover{
-    background-color: var(--cor-hover-bloco);
     color: var(--cor-hover-letra);
 }
-.btn-mobile{
+#btn-mobile{
     display: none;
-}
-@media (max-width: 635px){
-
-    .menu{
-        display: none;
-    }
-    .btn-mobile{
-        display: block;
-        margin-left: 100%;
-        float: right;
-    }
 }
 main{
     max-width: 800px;
@@ -91,4 +75,31 @@ main>p{
     font-size: 17px;
     text-indent: 1em;
 
+}
+@media (max-width: 635px){
+    #btn-mobile{
+        display: block;
+    }
+    #menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 113px;
+        right: 0px;
+    }
+    header{
+        
+    }
+    #nav{
+        font-size: 14px;
+    }
+    #nav.active #menu{
+        display: flex;
+    }
+    #main{
+        padding: 13px;
+    }
+    #main.active{
+        margin-top: 40px;
+    }
 }
