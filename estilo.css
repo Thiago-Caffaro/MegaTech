@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Quicksand:wght@300&display=swap');
+:root{
+    --fonte-titulo: 'Overpass', sans-serif;
+    --fonte-nav: 'Quicksand', sans-serif;
+    --fonte-main: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    --cor-fonte-main: #8e9696;
+    --cor-header: #1E1F21;
+    --cor-body: #2D3139;
+    --cor-hover-bloco: #3a3f49;
+    --cor-hover-letra: #FF6A81;
+}
+*{
+    color: white;
+}
+body{
+    background-color: var(--cor-body);    
+    margin: 0px;
+}
+header{
+    background-color: var(--cor-header);
+    height: 143px;
+}
+header>#logo-mt{
+    margin: 30px;
+    margin-bottom: 10px;
+}
+header>nav{
+    font-family: var(--fonte-nav);
+}
+header>nav>ul{
+    margin: 0 auto;
+}
+header>nav>ul>li{
+    display: inline;
+}
+header>nav>ul>li>a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    transition: .3s;
+}
+header>nav>ul>li>a:hover{
+    background-color: var(--cor-hover-bloco);
+    color: var(--cor-hover-letra);
+}
+.separador{
+    background-color: rgb(113, 114, 116);
+    height: 1px;
+}
+main{
+    max-width: 800px;
+    margin: auto;
+    padding-top: 15px;
+}
+main>h1{
+    font-family: var(--fonte-titulo);
+}
+main>h2{
+    font-family: var(--fonte-titulo);
+    padding-left: 10px;
+}
+main>p{
+    font-family: var(--fonte-main);
+    color: var(--cor-fonte-main);
+    padding-left: 10px;
+    font-size: 17px;
+    text-indent: 1em;
+
+}
