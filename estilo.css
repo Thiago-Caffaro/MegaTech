@@ -62,11 +62,12 @@ header>nav>ul>li>a:hover{
     display: none;
 }
 @media (max-width: 635px){
+
     .menu{
         display: none;
     }
     .btn-mobile{
-        display: inline;
+        display: inline-block  ;
         margin-left: 100%;
         float: right;
     }
