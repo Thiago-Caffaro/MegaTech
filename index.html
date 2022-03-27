@@ -9,9 +9,12 @@
 </head>
 <body>
     <header>
-        <img src="logo-mt.png" alt="logo-mt" id="logo-mt">
+        <picture>
+            <source media="(max-width: 635px)" srcset="imagens/logo-mt.png">
+            <img src="imagens/logo-mt-grande.png" alt="logo-mt" id="logo-mt">
+        </picture>
         <div class="separador"></div>
-        <nav>
+        <nav class="menu">
             <ul>
                 <li><a href="">Início</a></li>
                 <li><a href="">Mais matérias</a></li>
@@ -19,6 +22,7 @@
                 <li><a href="">Dicas</a></li>
                 <li><a href="">Sobre</a></li>
             </ul>
+            <button class="btn-mobile">Menu</button>
         </nav>
     </header>
     <main>

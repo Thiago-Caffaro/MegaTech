@@ -18,17 +18,31 @@ body{
 }
 header{
     background-color: var(--cor-header);
-    height: 143px;
+    height: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
 }
-header>#logo-mt{
-    margin: 30px;
-    margin-bottom: 10px;
+header>picture>#logo-mt{
+    margin: 20px;
+}
+.separador{
+    background-color: rgb(113, 114, 116);
+    height: 1px;
+}
+.menu{
+    font-size: 18px;
+    display: flex;
+    gap: 8px;
 }
 header>nav{
     font-family: var(--fonte-nav);
+    height: 70px;
 }
 header>nav>ul{
+    list-style: none;
     margin: 0 auto;
+    height: 100%;
 }
 header>nav>ul>li{
     display: inline;
@@ -37,15 +51,28 @@ header>nav>ul>li>a{
     text-decoration: none;
     display: inline-block;
     padding: 20px;
+    padding-bottom: 27px;
     transition: .3s;
 }
 header>nav>ul>li>a:hover{
     background-color: var(--cor-hover-bloco);
     color: var(--cor-hover-letra);
 }
-.separador{
-    background-color: rgb(113, 114, 116);
-    height: 1px;
+.btn-mobile{
+    display: none;
+}
+@media (max-width: 635px){
+    #logo-mt{
+        align-items: center;
+    }
+    .menu{
+        display: none;
+    }
+    .btn-mobile{
+        display: inline;
+        margin-left: 100%;
+        float: right;
+    }
 }
 main{
     max-width: 800px;
