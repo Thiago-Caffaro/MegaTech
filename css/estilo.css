@@ -78,7 +78,7 @@ main>p{
     }
     #menu{
         display: none;
-        position: absolute;
+        position:absolute;
         width: 100%;
         top: 70px;
         right: 0px;
@@ -99,6 +99,7 @@ main>p{
     #nav.active #menu{
         display: block;
         background-color: var(--cor-header);
+        width: 30%;
     }
     #main{
         padding: 15px;
