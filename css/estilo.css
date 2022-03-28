@@ -3,11 +3,13 @@
     --fonte-titulo: 'Overpass', sans-serif;
     --fonte-nav: 'Quicksand', sans-serif;
     --fonte-main: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    --tamanho-hamburger: 25px;
     --cor-fonte-main: #8e9696;
     --cor-header: #1E1F21;
     --cor-body: #2D3139;
     --cor-hover-bloco: #3a3f49;
     --cor-hover-letra: #FF6A81;
+    --cor-hamburger: whitesmoke;
 }
 *{
     color: white;
@@ -79,15 +81,15 @@ main>p{
     }
     #menu{
         display: block;
-        position:absolute;
+        position: absolute;
         top: 70px;
         left: 0px;
         z-index: 1000;
         height: 0px;
-        width: 100%;
         visibility: hidden;
         overflow-y: hidden;
-        transition: .4s;
+        transition: .5s;
+        padding: 0px;
     }
     #menu>li>a{
         border-bottom: 2px solid rgba(66, 66, 66, 0.253);
@@ -114,8 +116,19 @@ main>p{
         border: none;
         margin-top: 20px;
     }
-    #hamburguer{
-        border-top: 2px solid whitesmoke;
+    #hamburger{
+        border-top: 2px solid var(--cor-hamburger);
         width: 20px;
+    }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+    }
+    #nav.active #hamburger{
+
     }
 }
