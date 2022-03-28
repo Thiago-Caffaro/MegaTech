@@ -39,9 +39,6 @@ header>nav>ul{
     display: flex;
     margin: 0 auto;
 }
-header>nav>ul>li{
-    display: inline;
-}
 header>nav>ul>li>a{
     text-decoration: none;
     display: block;
@@ -75,7 +72,7 @@ main>p{
     text-indent: 1em;
 
 }
-@media (max-width: 1210px){
+@media (max-width: 1200px){
     #btn-mobile{
         display: block;
     }
@@ -85,18 +82,22 @@ main>p{
         width: 100%;
         top: 70px;
         right: 0px;
+        height: calc(100vh - 70px);
+        z-index: 1000;
+    }
+    #menu>li>a{
+        border-bottom: 2px solid rgba(66, 66, 66, 0.253);
+        padding: 16px 0;
+        margin: 0 16px;
     }
     header{
         height: 70px;
     }
     #nav{
-        font-size: 14px;
-    }
-    #nav>#menu>li{
-        display: block;
+        font-size: 19px;
     }
     #nav.active #menu{
-        display: flex;
+        display: block;
         background-color: var(--cor-header);
     }
     #main{
