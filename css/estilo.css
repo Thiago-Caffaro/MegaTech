@@ -77,13 +77,16 @@ main>p{
         display: block;
     }
     #menu{
-        display: none;
+        display: block;
         position:absolute;
-        width: 100%;
         top: 70px;
         right: 0px;
-        height: calc(100vh - 70px);
         z-index: 1000;
+        height: 0px;
+        width: 100%;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
     }
     #menu>li>a{
         border-bottom: 2px solid rgba(66, 66, 66, 0.253);
@@ -97,9 +100,10 @@ main>p{
         font-size: 19px;
     }
     #nav.active #menu{
-        display: block;
         background-color: var(--cor-header);
-        width: 30%;
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
     }
     #main{
         padding: 15px;
