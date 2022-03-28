@@ -100,9 +100,9 @@ main>p{
         background-color: var(--cor-header);
     }
     #main{
-        padding: 13px;
+        padding: 15px;
     }
     #main.active{
-        margin-top: 40px;
+        margin-top: 50px;
     }
 }
