@@ -16,6 +16,7 @@ body{
     background-color: var(--cor-body);    
     margin: 0px;
 }
+
 header{
     background-color: var(--cor-header);
     justify-content: space-between;
@@ -24,16 +25,14 @@ header{
 header>picture>#logo-mt{
     margin: 20px;
 }
-#nav{
-    font-size: 18px;
-    display: flex;
-    gap: 8px;
-}
 header>nav{
     font-family: var(--fonte-nav);
     height: 70px;
     margin: 20px;
     margin-right: 70px;
+    font-size: 18px;
+    display: flex;
+    gap: 8px;
 }
 header>nav>ul{
     list-style: none;
@@ -76,7 +75,7 @@ main>p{
     text-indent: 1em;
 
 }
-@media (max-width: 635px){
+@media (max-width: 1210px){
     #btn-mobile{
         display: block;
     }
@@ -84,17 +83,21 @@ main>p{
         display: none;
         position: absolute;
         width: 100%;
-        top: 113px;
+        top: 70px;
         right: 0px;
     }
     header{
-        
+        height: 70px;
     }
     #nav{
         font-size: 14px;
     }
+    #nav>#menu>li{
+        display: block;
+    }
     #nav.active #menu{
         display: flex;
+        background-color: var(--cor-header);
     }
     #main{
         padding: 13px;
