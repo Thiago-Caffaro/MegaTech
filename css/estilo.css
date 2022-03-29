@@ -6,26 +6,62 @@
     --tamanho-hamburger: 25px;
     --cor-fonte-main: #8e9696;
     --cor-header: #1E1F21;
+    --cor-barra-pesquisa: #424958;
     --cor-body: #2D3139;
     --cor-hover-bloco: #3a3f49;
     --cor-hover-letra: #FF6A81;
     --cor-hamburger: whitesmoke;
 }
-*{
-    color: white;
-}
 body{
     background-color: var(--cor-body);    
     margin: 0px;
 }
-
 header{
     background-color: var(--cor-header);
     justify-content: space-between;
     display: flex;
 }
-header>picture>#logo-mt{
+header>a>picture>#logo-mt{
     margin: 20px;
+}
+#caixa-pesquisa{
+    position: absolute;
+    height: 40px;
+    background-color: var(--cor-barra-pesquisa);
+    border-radius: 15px;
+    margin-top: 40px;
+    padding: 10px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.search-btn{
+    display: flex;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 2s;
+    align-items: center;
+    justify-content: center;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    color: aliceblue;
+    float: left;
+    padding: 0;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 550px;
+}
+#caixa-pesquisa:hover > .search-txt{
+    padding: 0 6px;
+}
+#caixa-pesquisa:hover > .search-bnt{
+    background-color: #8e9696;
 }
 header>nav{
     font-family: var(--fonte-nav);
@@ -44,6 +80,7 @@ header>nav>ul{
 header>nav>ul>li>a{
     text-decoration: none;
     display: block;
+    color: aliceblue;   
     padding: 20px;
     padding-bottom: 27px;
     transition: .3s;
@@ -58,6 +95,7 @@ main{
     max-width: 800px;
     margin: auto;
     padding-top: 15px;
+    color: whitesmoke;
 }
 main>h1{
     font-family: var(--fonte-titulo);
@@ -77,9 +115,47 @@ main>p{
 #logo-mt-xxp{
     display: none;
 }
-@media (max-width: 1200px){
+
+@media (max-width:1700px){
+    #caixa-pesquisa{
+        left: 39%;
+        transition: .5s;
+    }
+}
+@media (max-width: 1550px){
+    .search-txt{
+        width: 350px;
+    }
+}
+@media (max-width:1340px){
+    .search-txt{
+        width: 250px;
+    }
+}
+@media (max-width:1270px){
+    .search-txt{
+        width: 200px;
+    }
+}
+@media (max-width: 1220px){     
     #logo-mt{
         right: 0px;
+    }
+    .search-txt{
+        width: 400px;
+    }
+    #caixa-pesquisa{
+        left: 50%;
+        transition: .5s;
+        width: 440px;
+    }
+    #caixa-pesquisa:hover > .search-txt{
+        padding: 0 6px;
+    }
+    
+    header > nav{
+        margin: 0px;
+        margin-right: 20px;
     }
     #menu{
         display: block;
@@ -99,7 +175,7 @@ main>p{
         margin: 0 16px;
     }
     header{
-        height: 70px;
+        height: 80px;
     }
     #nav{
         font-size: 19px;
@@ -111,7 +187,6 @@ main>p{
         width: 36;
     }
     #btn-mobile{
-        float:none;
         display: flex;
         padding: 8px 16px;
         cursor: pointer;
@@ -121,7 +196,6 @@ main>p{
     }
     #hamburger{
         border-top: 2px solid var(--cor-hamburger);
-        width: 20px;
     }
     #hamburger::after, #hamburger::before{
         content: '';
@@ -130,24 +204,71 @@ main>p{
         height: 2px;
         background: var(--cor-hamburger);
         margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
     }
     #nav.active #hamburger{
-
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
     }
     main{
         padding: 20px;
     }
     
 }
-@media (max-width: 375px){
+@media (max-width: 940px){
+    .search-txt{
+        width: 350px;
+    }
+    #caixa-pesquisa{
+        left: 58%;
+    }
+}
+@media (max-width: 775px){
+    .search-txt{
+        width: 150px;
+    }
+    #caixa-pesquisa{
+        width: 250px;
+    }
+}
+@media (max-width:600px){
+    #caixa-pesquisa{
+        width: 40px;
+        left: 65%;
+    }
+    #caixa-pesquisa:hover{
+        width: 120px;
+    }
+    #caixa-pesquisa:hover .search-txt{
+        width: 60px;
+        
+    }
+    .search-txt{
+        width: 0px;
+    }
+
+}
+@media (max-width: 430px){
     #logo-mt{
         display: none;
     }
-    #logo-mt-xxp{
+    #caixa-pesquisa{
+        width: 40px;
+        left: 55%;
+    }
+    a > #logo-mt-xxp{
         display: flex;
         width: 60px;
         height: 45px;
-        padding: 10px;
-        padding-top: 15px ;
+        padding-top: 15px;
+        padding-left: 25px;
+        right: 50%;
     }
 }
