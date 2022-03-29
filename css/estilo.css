@@ -74,8 +74,10 @@ main>p{
     text-indent: 1em;
 
 }
+#logo-mt-xxp{
+    display: none;
+}
 @media (max-width: 1200px){
-
     #logo-mt{
         right: 0px;
     }
@@ -104,17 +106,18 @@ main>p{
     }
     #nav.active #menu{
         background-color: var(--cor-header);
-        height: 100vh;
+        height: 100%;
         visibility: visible;
-        width: 30%;
+        width: 36;
     }
     #btn-mobile{
+        float:none;
         display: flex;
         padding: 8px 16px;
         cursor: pointer;
         background-color: var(--cor-header);
         border: none;
-        margin-top: 20px;
+        padding-top: 28px;
     }
     #hamburger{
         border-top: 2px solid var(--cor-hamburger);
@@ -125,10 +128,26 @@ main>p{
         display: block;
         width: 20px;
         height: 2px;
-        background: currentColor;
+        background: var(--cor-hamburger);
         margin-top: 5px;
     }
     #nav.active #hamburger{
 
+    }
+    main{
+        padding: 20px;
+    }
+    
+}
+@media (max-width: 375px){
+    #logo-mt{
+        display: none;
+    }
+    #logo-mt-xxp{
+        display: flex;
+        width: 60px;
+        height: 45px;
+        padding: 10px;
+        padding-top: 15px ;
     }
 }
