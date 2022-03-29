@@ -182,7 +182,7 @@ main>p{
     }
     #nav.active #menu{
         background-color: var(--cor-header);
-        height: 100%;
+        height: calc(100vh - 70px);
         visibility: visible;
         width: 36;
     }
