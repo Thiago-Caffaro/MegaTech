@@ -3,7 +3,7 @@
     --fonte-titulo: 'Overpass', sans-serif;
     --fonte-nav: 'Quicksand', sans-serif;
     --fonte-main: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    --tamanho-hamburger: 25px;
+    --tamanho-hamburger: 25px;  
     --cor-fonte-main: #8e9696;
     --cor-header: #1E1F21;
     --cor-barra-pesquisa: #424958;
@@ -29,7 +29,7 @@ header>a>picture>#logo-mt{
     height: 40px;
     background-color: var(--cor-barra-pesquisa);
     border-radius: 15px;
-    margin-top: 40px;
+    margin-top: 56px;
     padding: 10px;
     left: 45%;
     transform: translate(-50%, -50%);
@@ -137,14 +137,16 @@ main>p{
         width: 200px;
     }
 }
+/*Comprime a barra de pesquisa quando passa de 1220px*/
 @media (max-width: 1220px){     
     #logo-mt{
         right: 0px;
     }
     .search-txt{
-        width: 400px;
+        width: 300px;
     }
     #caixa-pesquisa{
+        margin-top: 40px;
         left: 50%;
         transition: .5s;
         width: 440px;
@@ -241,13 +243,13 @@ main>p{
 @media (max-width:600px){
     #caixa-pesquisa{
         width: 40px;
-        left: 65%;
+        left: 57%;
     }
     #caixa-pesquisa:hover{
         width: 120px;
     }
     #caixa-pesquisa:hover .search-txt{
-        width: 60px;
+        width: 43px;
         
     }
     .search-txt{
