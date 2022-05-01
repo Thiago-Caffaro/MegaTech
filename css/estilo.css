@@ -99,16 +99,18 @@ main{
 }
 main>h1{
     font-family: var(--fonte-titulo);
+    font-size: 40px;
 }
 main>h2{
     font-family: var(--fonte-titulo);
     padding-left: 10px;
+    font-size: 35px;
 }
 main>p{
     font-family: var(--fonte-main);
     color: var(--cor-fonte-main);
     padding-left: 10px;
-    font-size: 17px;
+    font-size: 22px;
     text-indent: 1em;
 
 }
